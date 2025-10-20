@@ -1,8 +1,8 @@
 import app from "./src/app.js";
-import https from 'https';
+import http from 'http';
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+//import { fileURLToPath } from 'url';
 
 const PORT = 3000;
 
@@ -23,7 +23,7 @@ const sslOptions = {
 <<<<<<< HEAD
 */
 
-
+/*
 const caminho = "/opt/bitnami/apache/conf/bitnami/";
 
 const sslOptions = {
@@ -31,7 +31,7 @@ const sslOptions = {
   cert: fs.readFileSync(path.join(caminho, 'certs', 'server.crt')),
   ca: fs.readFileSync(path.join(caminho, 'certs', 'www_arptec_xyz.ca-bundle')),
 }
-
+*/
 
 
 /*
@@ -43,16 +43,18 @@ const sslOptions = {
 }
 */
 
-
+/*
 const server = https.createServer(sslOptions, app);
 
 server.listen(PORT, () => {
   console.log("servidor escutando!");
 });
+*/
 
-/*
+const server = http.createServer(app);
+
 app.listen(PORT, () => {
   console.log("servidor escutando!");
 });
-*/
+
 
