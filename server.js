@@ -5,8 +5,8 @@ const PORT = 3000;
 
 const server = http.createServer(app);
 
-app.listen(PORT, () => {
-  console.log("servidor escutando!");
+server.listen(PORT, () => {
+  console.log(`Servidor escutando na porta ${PORT}!`);
 });
 
 
